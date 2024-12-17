@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body bgcolor="yellow">
+  <a href="/">Home </a> |
+  <a href="/insert">Insert </a> |
+  <a href="/display">Display </a> |
+  <a href="/contact">Contact</a> |
+    <h1> Contact us</h1>
+
+    <table align="center" bgcolor="pink">
+      <tr>
+        <th> Emp no</th>
+        <th> Name</th>
+        <th> City </th>
+        <th> Salary</th>
+        <th> </th>
+      </tr>
+    <% Data.forEach((key)=>{ %>
+      <tr>
+        <td> <%= key.empno  %> </td>
+        <td> <%= key.name  %> </td>
+        <td> <%= key.city  %> </td>
+        <td> <%= key.salary  %> </td>
+        <td>
+         
+          <a href="/recdel/?id=<%= key.id %>">
+         Delete
+         </a>
+
+        </td>
+      </tr>
+   <%
+    })  %>
+
+  </table>
+</body>
+</html>
